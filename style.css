@@ -17,10 +17,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background: var(--second-color);
-}
-
 .sidebar{
     width: 345px;
     position: fixed;
@@ -71,12 +67,13 @@ body{
 .sidebar-menu a.active{
     background: var(--second-color);
     padding-top: 1rem;
+    border-right: 4px solid var(--main-color);
     padding-bottom: 1rem;
     color: var(--main-color);
     border-radius: 15px 0 0 15px;
 }
 
-.sidebar-menu a.active .menu-bar{
+/* .sidebar-menu a.active .menu-bar{
     display: inline-block;
     position: absolute;
     right: 0px;
@@ -85,7 +82,7 @@ body{
     height:3.7rem;
     border-radius: 10px;
     background: var(--main-color);
-}
+} */
 
 .sidebar-button{
     background: var(--main-color);
@@ -185,8 +182,14 @@ header label span{
 }
 
 /* Body section */
+main{
+    margin-top:5rem;
+    padding: 2rem 1.5rem;
+    background: var(--second-color);
+    min-height: calc(100vh - 10rem);
+}
 .recent-grid{
-    margin-top: 3.5rem;
+    margin-left: 345px;
     display: grid;
     grid-template-columns:65% auto;
     grid-gap: 2rem;
@@ -194,6 +197,7 @@ header label span{
 
 .card{
     background: #fff;
+    border-radius: 30px;
 }
 
 .card-header,
