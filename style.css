@@ -75,6 +75,11 @@
     font-size: 1.1rem;
 }
 
+.sidebar-menu a span:first-child{
+    padding-right: 1rem;
+    font-size: 32px;
+}
+
 .sidebar-menu a.active{
     background: var(--second-color);
     padding-top: 1rem;
@@ -87,7 +92,7 @@
 .sidebar-button{
     background: var(--main-color);
     margin-left: 3rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     height: 90px;
     width: 260px;
     box-shadow: 0px 20px 40px 0px rgba(11, 41, 151, 0.2);
@@ -105,7 +110,7 @@
 }
 
 .copyright{
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-right: 3rem;
     margin-left: 3rem;
     font-size: 13px;
@@ -243,7 +248,7 @@ header label span{
 main{
     margin-top:5rem;
     padding: 2rem 1.5rem;
-    background: var(--second-color);
+    background: #E5E5E5;
     min-height: calc(100vh - 10rem);
 }
 .grid-container{
@@ -270,15 +275,15 @@ main{
     background: var(--main-color);
     border-radius: 30px;
     color: #fff;
-    font-size: .8rem;
+    font-size: 1rem;
     padding: 0.7rem 1.5rem;
     outline: none;
     border: none;
 }
 
 .card-header button span{
-    padding-right: 2rem;
-    font-size: 16px;
+    padding-right: 1rem;
+    font-size: 24px;
 }
 .card-header div small{
     display: inline-block;
@@ -303,6 +308,16 @@ main{
     border-radius: 30px;
 
 }
+
+/* .card-header .pills + button{
+    font-size: 16px
+    ;
+}
+
+.card-header .pills + button span{
+    font-size: 24px;
+} */
+
 .card-body{
     display: flex;
     padding: 0 1rem 1.2rem 1rem;
@@ -352,7 +367,7 @@ td .tab3{
 
 td .tab3 span:first-child{
     margin-right: 0.5rem;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 td .tab4{
@@ -363,7 +378,7 @@ td .tab4{
 
 td .tab4 span:first-child{
     margin-right: 0.5rem;
-    font-size: 18px;
+    font-size: 24px;
 }
 td .tab4,
 td .tab5{
@@ -374,7 +389,8 @@ td .tab5{
 }
 
 td .tab5{
-    font-size: 18px;
+    font-size: 29px;
+    padding: .3rem .5rem;
     text-align: center ;
     color: var(--color-black);
 }
@@ -406,6 +422,7 @@ table tr:last-child .tab2 .sub-details small + small{
     text-transform: capitalize;
 }
 
+table tr:nth-child(3) .tab3,
 table tr:nth-child(4) .tab3{
     color: #1DA7C5;
 }
@@ -565,7 +582,7 @@ ul {
 /* pagination */
 .pagination {
     display: inline-block;
-    background:#ddd;
+    background:#E6E8F5;
     padding: .5rem .3rem;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -581,6 +598,9 @@ ul {
     font-weight: 600;
     text-decoration: none;
   }
+  .pagination a.exempt{
+      color: var(--text-gray);
+  }
   
   .pagination a.active {
     background-color: var(--main-color);
@@ -593,13 +613,18 @@ ul {
   }
   
  .pagination a:hover:not(.active) {
-    background-color: var(--second-color);
+    background-color: #fff;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     }
-  
+
+    .pagination a:first-child span:first-child,
+    .pagination a:last-child span:last-child{
+        color: var(--main-color);
+    }
+ 
 
 
 
