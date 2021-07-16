@@ -223,7 +223,7 @@ main{
     background: var(--second-color);
     min-height: calc(100vh - 10rem);
 }
-.recent-grid{
+.grid-container{
     margin-left: 345px;
     display: grid;
     grid-template-columns:70% auto;
@@ -236,13 +236,11 @@ main{
 }
 
 .card-header{
-    padding:1.2rem 1rem;
-}
-
-.card-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding:1.2rem 1rem;
+    margin: 0 1.5rem;
 }
 
 .card-header button{
@@ -297,12 +295,19 @@ td{
     font-size: .9rem;
 }
 
-td h2, td small{
-    text-align: center;
-}
-
 td div small{
     font-weight: 600;
+}
+
+td .tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    background: var(--second-color);
+    padding: .4rem .6rem;
+    border-radius: 15px;
 }
 
 td .tab2{
@@ -376,11 +381,9 @@ ul {
     padding: 0 1rem 1rem 1rem;
   }
   .calendar__body--days {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 13px;
   }
+
   .calendar__body--days li {
     font-weight: bold;
     margin-bottom: 1rem;
@@ -388,14 +391,14 @@ ul {
     text-align: center;
     color: var(--color-calendar);
   }
-  .calendar__body--dates {
+  .calendar__body--dates,
+  .calendar__body--days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     justify-items: center;
     text-align: center;
   }
   .calendar__body--dates li {
-    display: grid;
     padding: .5rem .8rem;
     color: var(--color-calendar);
     font-size: 15px;
@@ -427,15 +430,32 @@ ul {
     border-radius: 50%;
   }
   
-  .customers{
-      margin-top: .5rem;
+  .projects-2{
+      display: flex;
+      flex-direction: column;
+      grid-gap: .3rem;
   }
 
-.card-body h2.plan-number,
-td .tab{
+.customers .card-header{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding:1.2rem 1rem;
+    margin: 0 .8rem;
+}
+
+.customers .card-body{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    grid-gap: 1rem;
+    margin: 0 .8rem;
+}
+
+.card-body h3.plan-number{
     color: var(--main-color);
     background: var(--second-color);
-    padding: .4rem .8rem;
+    padding: .4rem .7rem;
     border-radius: 15px;
 
 }
